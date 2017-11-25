@@ -1,6 +1,6 @@
 {
   "name": "chatbotbase-chatbaseplugin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A tracking plugin for ChatbotBase to support tracking mesages to Chatbase",
   "main": "Chatbase.js",
   "types": "Chatbase.d.ts",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/rekire/ChatbotBase-ChatbasePlugin#readme",
   "dependencies": {
-    "chatbotbase": "^0.1.0",
+    "chatbotbase": "^0.2.0",
     "@google/chatbase": "^1.0.0"
   },
   "devDependencies": {

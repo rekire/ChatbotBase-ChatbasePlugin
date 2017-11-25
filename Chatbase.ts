@@ -5,15 +5,14 @@ export class Chatbase implements TrackingProvider {
     private chatbase: any;
     private messageSet: any;
     private version: string;
+    name: string = "Chatbase";
+    logging: boolean = false;
 
     constructor(apiKey: string, appVersion: string) {
         this.chatbase = require('@google/chatbase').setApiKey(apiKey);
         this.messageSet = this.chatbase.newMessageSet().setApiKey(apiKey);
         this.version = appVersion;
     }
-
-    name: string = "Chatbase";
-    logging: boolean = false;
 
     trackInput(input: Input): Promise<any> {
         return new Promise((resolve, reject) => {

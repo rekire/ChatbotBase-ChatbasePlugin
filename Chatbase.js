@@ -48,3 +48,4 @@ class Chatbase {
     }
 }
 exports.Chatbase = Chatbase;
+//# sourceMappingURL=Chatbase.js.map
