@@ -16,7 +16,6 @@ export class Chatbase implements TrackingProvider {
     private messageSet: any;
     private version: string;
     name: string = "Chatbase";
-    logging: boolean = false;
 
     constructor(apiKey: string, appVersion: string) {
         this.chatbase = chatbase.setApiKey(apiKey);
