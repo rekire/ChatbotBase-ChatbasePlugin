@@ -1,0 +1,23 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "ES2018",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "lib": [
+      "es2018",
+      "es2018.promise",
+      "dom"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "test/"
+  ]
+}

@@ -1,5 +1,15 @@
 import {Input, Output, TrackingProvider} from 'chatbotbase';
-declare function require(path: string): any;
+import chatbase from '@google/chatbase';
+declare var process: NodeCompat.Process;
+
+declare namespace NodeCompat {
+    interface Process {
+        env: ProcessEnv
+    }
+    interface ProcessEnv {
+        [key: string]: string | undefined;
+    }
+}
 
 export class Chatbase implements TrackingProvider {
     private chatbase: any;
@@ -9,12 +19,12 @@ export class Chatbase implements TrackingProvider {
     logging: boolean = false;
 
     constructor(apiKey: string, appVersion: string) {
-        this.chatbase = require('@google/chatbase').setApiKey(apiKey);
+        this.chatbase = chatbase.setApiKey(apiKey);
         this.messageSet = this.chatbase.newMessageSet().setApiKey(apiKey);
         this.version = appVersion;
     }
 
-    trackInput(input: Input): Promise<any> {
+    trackInput(input: Input): Promise<never> {
         return new Promise((resolve, reject) => {
             this.messageSet.newMessage()
                 .setPlatform(input.platform)
@@ -30,7 +40,7 @@ export class Chatbase implements TrackingProvider {
         })
     }
 
-    trackOutput(output: Output): Promise<any> {
+    trackOutput(output: Output): Promise<never> {
         return new Promise((resolve, reject) => {
             this.messageSet.newMessage()
                 .setPlatform(output.platform)
