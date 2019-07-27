@@ -1,6 +1,6 @@
 {
   "name": "chatbotbase-chatbaseplugin",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A tracking plugin for ChatbotBase to support tracking messages to Chatbase",
   "main": "Chatbase.js",
   "types": "Chatbase.d.ts",
