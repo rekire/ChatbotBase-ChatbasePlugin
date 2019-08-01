@@ -4,6 +4,9 @@ A tracking plugin for [ChatbotBase][chatbotbase] to support tracking messages to
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 
+## Features
+ - Track input and output messages
+
 ## Usage
 This Plugin allows you to track the input of the user to chatbase. To use just just import the chatbaseplugin and
 overwrite the `loadTracker()` method like this:
