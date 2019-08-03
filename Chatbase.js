@@ -4,8 +4,7 @@ const chatbase_1 = require("@google/chatbase");
 class Chatbase {
     constructor(apiKey, appVersion) {
         this.name = "Chatbase";
-        this.chatbase = chatbase_1.default.setApiKey(apiKey);
-        this.messageSet = this.chatbase.newMessageSet().setApiKey(apiKey);
+        this.messageSet = chatbase_1.newMessageSet().setApiKey(apiKey);
         this.version = appVersion;
     }
     trackInput(input) {

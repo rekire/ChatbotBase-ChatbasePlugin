@@ -1,5 +1,5 @@
 import {Input, Output, TrackingProvider} from 'chatbotbase';
-import chatbase from '@google/chatbase';
+import {newMessageSet} from '@google/chatbase';
 declare var process: NodeCompat.Process;
 
 declare namespace NodeCompat {
@@ -12,14 +12,12 @@ declare namespace NodeCompat {
 }
 
 export class Chatbase implements TrackingProvider {
-    private chatbase: any;
     private messageSet: any;
     private version: string;
     name: string = "Chatbase";
 
     constructor(apiKey: string, appVersion: string) {
-        this.chatbase = chatbase.setApiKey(apiKey);
-        this.messageSet = this.chatbase.newMessageSet().setApiKey(apiKey);
+        this.messageSet = newMessageSet().setApiKey(apiKey);
         this.version = appVersion;
     }
 
